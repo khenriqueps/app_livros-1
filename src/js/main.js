@@ -5,9 +5,6 @@ import contato from "./components/paginas/contato.js";
 import servicos from "./components/paginas/servicos.js";
 
 const app = document.getElementById('app');
-//app.textContent ='<h1>Olá Mundo!</h1>';
-
-// #inicio #sobre #contato #servicos
 let rota = window.location.hash || '#inicio';
 render();
 window.addEventListener("hashchange", ()=>{
@@ -45,8 +42,6 @@ function capturarFormulario(){
     lista.style.listStyle = "none";
     formulario.addEventListener('submit', (event) => {
         event.preventDefault();
-        //console.log(event);
-        //const idadeInput = event.target.elements['idade'];
         const idade = document.getElementById('idade');
         if(idade.value >= 65){
             console.log("Pessoa com prioridade!");
@@ -65,30 +60,3 @@ function capturarFormulario(){
     } );
 }
 
-// console.log("contagem regressiva")
-// for(let i=100; i>=0; i-=5){
-//     console.log(i);
-// }
-
-// console.log("contagem progressiva")
-// // + soma - subtração / divisão * multiplicação % resto da divisão
-// // 4 % 2 = 0
-// // 5 % 2 = 1
-// for(let i=0; i<=100; i++){
-//     if(i % 2 === 0){
-//         console.log(i + " é par");
-//     }
-// }
-// let temperatura = 20;
-// let ligado = true;
-// while(true){
-//     console.log("A temperatura atual é: " + temperatura);
-//     temperatura += 0.05;
-//     if(temperatura >= 30 && temperatura < 33){
-//         console.log("Enviar email de alerta: Temperatura alta!");
-//     }else if(temperatura >= 33){
-//         ligado = false;
-//         console.log("Desligando o sistema para evitar danos.");
-//         break;
-//     }
-// }
